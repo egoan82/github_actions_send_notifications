@@ -13,6 +13,10 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ${{ github.actor }} ha creado un nuevo commit:
+            Acción generada ${{ github.action }}
+            Acción: ${{ github.action_repository }}
+            Estado: github.action_status
+            
             Mensaje del commit: ${{ github.event.commits[0].message }}
             
             Repositorio: ${{ github.repository }}
